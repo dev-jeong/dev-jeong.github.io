@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-scroll';
+import React from "react";
+import { Link } from "react-scroll";
 
 import "bootstrap/dist/js/bootstrap.js";
 import "bootstrap/dist/css/bootstrap.css";
@@ -63,7 +63,7 @@ function Skills() {
     { name: "Redis", code: "DC382D" },
     { name: "GitHub", code: "181717" },
     { name: "Elasticsearch", code: "005571" },
-    { name: "Jenkins", code: "D24939" }
+    { name: "Jenkins", code: "D24939" },
   ];
 
   const developing = [
@@ -72,7 +72,7 @@ function Skills() {
     { name: "Spring", code: "6DB33F" },
     { name: "apachekafka", code: "231F20" },
     { name: "amazonSQS", code: "FF4F8B" },
-    { name: "gRPC", code: "4285F4"}
+    { name: "gRPC", code: "4285F4" },
   ];
 
   const describe = (
@@ -101,28 +101,24 @@ function Skills() {
         <h1>Skills</h1>
         <div className="col-sm-6">
           <h4>ADVANCED</h4>
-          <p> 
-          {
-            advenced.map((element) => (
+          <p>
+            {advenced.map((element) => (
               <img
                 src={`https://img.shields.io/badge/${element.name}-${element.code}?style=round-square&logo=${element.name}&logoColor=white`}
                 alt={`${element.name} badge`}
               />
-            ))
-          }
+            ))}
           </p>
         </div>
         <div className="col-sm-6">
           <h4>DEVELOPING</h4>
           <p>
-          {
-            developing.map((element) => (
+            {developing.map((element) => (
               <img
                 src={`https://img.shields.io/badge/${element.name}-${element.code}?style=round-square&logo=${element.name}&logoColor=white`}
                 alt={`${element.name} badge`}
               />
-            ))
-          }
+            ))}
           </p>
         </div>
         <div>{describe}</div>
@@ -163,11 +159,11 @@ function History() {
       subtitle: "컴퓨터공학과",
       duration: "2012.3 ~ 2018.2",
       details: [
-        "자료구조, 운영체제, 알고리즘 등 프로그래밍의 기초 내용을 수강",
+        "프로그래밍의 기초인 자료구조, 운영체제, 알고리즘을 수강",
         "C, C++, JAVA 등 다양한 프로그래밍 언어에 대한 강의를 이수",
-        "데이터베이스 수업을 통해 RDMS와 MySQL에 대한 내용을 습득",
+        "Database 강의를 통해 RDMS와 MySQL에 대한 내용을 습득",
         "임베디드 리눅스 수업을 통해 Linux 운영체제 사용 방법을 학습",
-        "모바일 및 웹 프로그래밍 수업을 통해 애플리케이션 개발에 관련된 내용을 습득",
+        "모바일, 웹 프로그래밍 수업을 통해 APP개발 관련 내용 습득",
         '"웹 기반 라디오 스트리밍 서비스"라는 주제로 프로젝트를 진행',
       ],
       tags: [],
@@ -189,13 +185,11 @@ function History() {
                       <p> {element.subtitle} | {element.duration}</p>
                       <p>
                         {element.details.map((detail, detailIndex) => (
-                          <li key={detailIndex}>{detail}</li>
+                          <><strong>&#183;</strong> {detail}<br/></>
                         ))}
                       </p>
                       {element.tags.map((tag, tagIndex) => (
-                        <span class="badge badge-pill" key={tagIndex}>
-                          {tag}
-                        </span>
+                        <span class="badge badge-pill" key={tagIndex}> {tag} </span>
                       ))}
                     </div>
                   </div>
@@ -216,12 +210,30 @@ function Projects() {
       heading: "(주)토스랩",
       contents: [
         {
-          title: "Content 1 Title",
-          describe: "This is the content of the first accordion panel.",
+          title: "대용량 데이터 분산 처리",
+          describe: (
+            <>
+              <strong>문제점</strong><br />
+              협업용 메신저 “잔디(Jandi)”에서는 채팅방을 들어가고 나갈 수 있음.
+              이때 많은 인원이 채팅방을 나가게 되면 삭제해야 하는 데이터가 상당수 존재하여 속도 저하 문제가 발생<br />
+              <strong>문제 해결</strong><br />
+              AWS SQS와 Consumer Batch를 활용하여 즉시 처리해야 하는 데이터를 제외한 나머지 데이터를 후처리하는 방식으로 변경<br />
+              <strong>성과</strong><br />
+              1,000명 기준 3분 정도 걸리던 프로세스가 20~30초로 단축
+            </>
+          ),
         },
         {
-          title: "Content 2 Title",
-          describe: "This is the content of the second accordion panel.",
+          title: "Module Version Up",
+          describe: (
+            <>
+              <strong>문제점</strong><br />
+              NodeJS의 버전업에 있어서 호환되지 않는 module이 존재<br />
+              <strong>업무 내용</strong><br />
+              타깃 버전에 적합한 module의 버전을 확인하고 버전업을 진행하려 했으나 현재 버전과 최신 버전 간의 사용 방식이 크게 변경되어 불가능.
+              사용 방식 차이점을 비교, 분석한 내용을 기반으로 코드 수정
+            </>
+          ),
         },
       ],
     },
@@ -230,12 +242,31 @@ function Projects() {
       heading: "(주)원트리즈뮤직",
       contents: [
         {
-          title: "Content 3 Title",
-          describe: "This is the content of the third accordion panel.",
+          title: "사용자 데이터 분석 프로세스 리뉴얼",
+          describe: (
+            <>
+              <strong>문제점</strong><br />
+              기존 사용자 데이터는 Raw text로 기록되어 정형화되지 않았으며, 
+              불필요한 데이터를 많이 포함하고 있어 분석하는 데 오랜 시간이 걸릴 뿐만 아니라 
+              백업 및 파일 이동과 같은 관리 업무에도 많은 불편함이 존재<br />
+              <strong>개선 및 성과</strong><br />
+              클라이언트의 사용 기록을 Raw text로 저장되던 기존의 LogAPI를 정형화된 CSV 형태로 기록되게끔 개선.
+              분석에 필요한 데이터만을 저장함으로써, 데이터 용량을 약 80% 이상 축소. 
+              이를 통해 Log 분석 시간을 대폭 낮추고, Log 파일 관리도 훨씬 수월해짐. 
+              분석된 데이터는 담당 부서로 전달되어 서비스 품질향상에 크게 이바지함. 
+              또한 해당 데이터는 한국 저작권 협회, 음반 산업 협회 등에서 활용됨.
+            </>
+          ),
         },
         {
-          title: "Content 4 Title",
-          describe: "This is the content of the fourth accordion panel.",
+          title: "Media Streaming API",
+          describe: (
+            <>
+              Wowza Streaming Engine과 미디어 파일 및 스트림의 체계적 관리를 바탕으로 클라이언트에게 API를 통해 실시간 미디어 스트림을 제공.
+              Transcoder를 지원했음에도 인터넷 환경의 불안정으로 안정적인 서비스를 받지 못하는 고객을 위해 클라이언트는 다운로드 & 플레이 방식을 추가.
+              해당 작업에서 API를 개발 및 유지보수와 CDN 기반의 미디어 파일 인프라 구축 등을 지원.
+            </>
+          ),
         },
       ],
     },
@@ -244,12 +275,25 @@ function Projects() {
       heading: "개인 프로젝트",
       contents: [
         {
-          title: "Content 3 Title",
-          describe: "This is the content of the third accordion panel.",
+          title: "Naver Search AD",
+          describe: (
+            <>
+              네이버 광고는 클릭당 단가가 높은 광고가 페이지 상위에 노출되게끔 구성되어 있음.
+              광고주는 최대한 낮은 금액으로 페이지 상단에 노출 시키기 위해 클릭당 단가를 소폭 높이고 낮추는 작업을 반복함.
+              이러한 작업을 네이버 OPEN API와 연동하여 반복적으로 수행하는 Python 스크립트를 제작
+            </>
+          ),
         },
         {
-          title: "Content 4 Title",
-          describe: "This is the content of the fourth accordion panel.",
+          title: "Update Macro",
+          describe: (
+            <>
+              개인 쇼핑몰의 상품정보를 업로드&업데이트해 주는 사이트가 존재.
+              하지만 자동으로 동작하지 않고 해당 사이트에서 일렬의 작업들을 직접 진행해야함.
+              해당 작업을 주기적으로 하지 않으면 상품정보의 일관성이 깨져 쇼핑몰 운영에 차질이 발생. 
+              Handless Browser인 Puppeteer를 활용해 이러한 일렬의 작업을 자동으로 반복해 줄 수 있는 스크립트를 제작
+            </>
+          ),
         },
       ],
     },
@@ -259,16 +303,15 @@ function Projects() {
     <section name="project">
       <div className="row row-bottom-padded-sm">
         <h1>Project</h1>
-        <div className="accordion mt-3" id="myAccordion">
+        <div className="accordion accordion-flush mt-3" id="projectAccordion">
           {accordionData.map((item, index) => (
             <div className="accordion-item" key={index}>
               <h2 className="accordion-header" id={`heading-${item.id}`}>
                 <button
-                  className="accordion-button"
-                  type="button"
+                  className="accordion-button collapsed"
+                  aria-expanded="false"
                   data-bs-toggle="collapse"
                   data-bs-target={`#collapse-${item.id}`}
-                  aria-expanded={false}
                   aria-controls={`collapse-${item.id}`}
                 >
                   {item.heading}
@@ -276,19 +319,20 @@ function Projects() {
               </h2>
               <div
                 id={`collapse-${item.id}`}
-                className={`accordion-collapse collapse ${
-                  index === 0 ? "show" : ""
-                }`}
+                className="accordion-collapse collapse"
                 aria-labelledby={`heading-${item.id}`}
-                data-bs-parent="#myAccordion"
+                data-bs-parent="#projectAccordion"
               >
                 {item.contents.map((content, contentIndex) => (
-                  <div className="accordion-body">
-                    <div key={contentIndex}>
-                      <h5>{content.title}</h5>
-                      <p>{content.describe}</p>
+                  <React.Fragment key={contentIndex}>
+                    <div className="accordion-body">
+                      <div>
+                        <h5>{content.title}</h5>
+                        <p>{content.describe}</p>
+                      </div>
                     </div>
-                  </div>
+                    {contentIndex !== item.contents.length - 1 && <hr />}
+                  </React.Fragment>
                 ))}
               </div>
             </div>
