@@ -50,7 +50,7 @@ body {
 }
 
 .sidebar .profile-img {
-  margin: 0px auto 30px;
+  margin: 30px auto;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;

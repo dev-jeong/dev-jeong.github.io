@@ -152,7 +152,7 @@ function History() {
     },
     {
       title: "(주)원트리즈뮤직",
-      duration: "2017.7 ~ 2023.5",
+      duration: "2017.7 ~ 2022.5",
       subtitle: "IT개발운영팀",
       details: [
         "\"매장음악서비스 Rhymeduck\" API서버 개발 및 유지보수",
