@@ -5,7 +5,7 @@ import "bootstrap/dist/js/bootstrap.js";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 
-import { AiOutlineMail } from "react-icons/ai";
+import { AiFillPhone, AiOutlineMail } from "react-icons/ai";
 import { SiGithub, SiTistory } from "react-icons/si";
 
 function Sidebar() {
@@ -20,6 +20,13 @@ function Sidebar() {
         <a href="mailto:need9306@gmail.com"><AiOutlineMail /></a>
         <a href="https://github.com/dev-jeong"><SiGithub /></a>
         <a href="https://devjeong-note.tistory.com"><SiTistory /></a>
+      </div>
+        <div className="profile-contact-mobile">
+        <h3>정희원 | Jeong Hee Won</h3>
+        <p className="hidden"> <AiFillPhone /> 010-4321-8693</p>
+        <p> <AiOutlineMail /> need9306@gmail.com</p>
+        <p> <SiGithub/> https://github.com/dev-jeong</p>
+        <p> <SiTistory /> https://devjeong-note.tistory.com</p>
       </div>
       <nav>
         <ul>
@@ -36,10 +43,10 @@ function Sidebar() {
 function Intro() {
   const intro = (
     <>
-      Back-end 개발자에게 가장 중요한 역량은 무엇일까요?<br />
-      저는 안정적이고 효율적인 서비스를 만들어 내는 능력이라고 생각합니다.<br />
-      모든 플랫폼에 영향을 줄 수 있는 Back-end Part의 신뢰도는 곧 서비스 그 자체의 신뢰도와 직결됩니다.<br />
-      면밀한 코드 검토, 엄격한 테스트, 최신 기술 및 최적화된 알고리즘의 적용을 통해 사용자의 경험을 향상시키고<br />
+      Back-end 개발자에게 가장 중요한 역량은 무엇일까요?
+      저는 안정적이고 효율적인 서비스를 만들어 내는 능력이라고 생각합니다.
+      모든 플랫폼에 영향을 줄 수 있는 Back-end Part의 신뢰도는 곧 서비스 그 자체의 신뢰도와 직결됩니다.
+      면밀한 코드 검토, 엄격한 테스트, 최신 기술 및 최적화된 알고리즘의 적용을 통해 사용자의 경험을 향상시키고
       고객에게 신뢰도 높은 서비스를 제공할 수 있도록 노력하겠습니다.
     </>
   );
@@ -173,7 +180,7 @@ function History() {
   return (
     <section name="history">
       <div className="row row-bottom-padded-sm">
-        <h2>Career & Education</h2>
+        <h1>Career & Education</h1>
         <section>
           <div className="container">
             <div className="main-timeline">
@@ -283,6 +290,8 @@ function Projects() {
               이러한 작업을 네이버 OPEN API와 연동하여 반복적으로 수행하는 Python 스크립트를 제작
             </>
           ),
+          gitLink: "https://github.com/dev-jeong/NaverSearchAD",
+          blogLink: "https://devjeong-note.tistory.com/21",
         },
         {
           title: "Update Macro",
@@ -294,6 +303,8 @@ function Projects() {
               Handless Browser인 Puppeteer를 활용해 이러한 일렬의 작업을 자동으로 반복해 줄 수 있는 스크립트를 제작
             </>
           ),
+          gitLink: "https://github.com/dev-jeong/UpdateMacro",
+          blogLink: "https://devjeong-note.tistory.com/42",
         },
       ],
     },
@@ -329,6 +340,10 @@ function Projects() {
                       <div>
                         <h5>{content.title}</h5>
                         <p>{content.describe}</p>
+                        <div className="contentLink">
+                          {content.gitLink && <a href={content.gitLink}>GitHub 바로가기</a>}
+                          {content.blogLink && <a href={content.blogLink}>Blog 바로가기</a>}
+                        </div>
                       </div>
                     </div>
                     {contentIndex !== item.contents.length - 1 && <hr />}
