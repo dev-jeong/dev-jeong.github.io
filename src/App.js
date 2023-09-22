@@ -142,10 +142,11 @@ function History() {
       subtitle: "Back-end Team",
       details: [
         "\"업무용 메신저 Jandi\" Back-end서버 개발 및 유지보수",
+        "NodeJS(express.js)기반의 RESTful API 서버 운영 ",
         "Java Spring & gRPC를 활용한 MSA 운영",
-        "Redis Cache를 활용한 서비스 속도 개선",
+        "MongoDB, MySQL, Redis 데이터베이스 활용",
         "Kafka, SQS를 이용한 메세지 분산 시스템 경험",
-        "Git(flow), Jenkins, AWS CodePipe을 활용한 CI/CD",
+        "Git(flow), Jenkins, AWS CodePipe을 활용한 CI/CD"
       ],
       tags: ["NodeJS", "ExpressJS", "JAVA", "Spring", "gRPC", "MySQL", "MongoDB", "Redis", "GitHub","Jenkins", "AWS Code Pipeline"],
     },
@@ -156,8 +157,9 @@ function History() {
       details: [
         "\"매장음악서비스 Rhymeduck\" API서버 개발 및 유지보수",
         "Wowza Streaming Engine 기반의 Media stream 관리",
+        "MySQL 데이터베이스 활용",
         "Python Script를 이용한 사용자 데이터 분석 최적화",
-        "Microsoft Azure, AWS를 이용한 사내 솔루션 인프라 구축",
+        "Microsoft Azure, AWS를 이용한 솔루션 인프라 구축",
       ],
       tags: ["NodeJS", "ExpressJS", "Python", "MySQL", "Wowza Streaming Engine", "Microsoft Azure", "AWS"],
     },
