@@ -239,7 +239,19 @@ section {
 }
 
 section .row {
-  padding: 0 4.5em;
+  padding: 0 75px;
+}
+
+@media print, screen and (max-width: 768px) {
+  section .row {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .sidebar .profile-contact-mobile p {
+    padding: 0 10px;
+  }
 }
 
 section .col-sm-6 {
