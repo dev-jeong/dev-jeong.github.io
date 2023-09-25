@@ -53,7 +53,7 @@ function Intro() {
 
   return (
     <section id="intro">
-      <div className="row row-bottom-padded-sm">
+      <div className="row">
         <h1>Intro</h1>
         <div>{intro}</div>
       </div>
@@ -85,7 +85,7 @@ function Skills() {
   const describe = (
     <>
       저는 Restful API 개발 및 운영, MSA 구축 및 분산 처리, 그리고 다양한 Tool들을 활용한 CI/CD이라는 세 가지 핵심 역량을 보유하고 있습니다.
-      이러한 역량을 바탕으로 빠르고 안정적인 개발과 배포를 수행하고자 하며, 더불어 기술적 도전도 마다하지 않는 개발자입니다.<br/><br />
+      이러한 역량을 바탕으로 빠르고 안정적인 개발과 배포를 수행하고자 하며, 더불어 새로운 기술적 도전도 마다하지 않는 개발자입니다.<br/><br />
 
       <strong>첫째</strong>, NodeJS의 Express 프레임워크를 활용하여 Restful API를 개발하고 운영하는 업무를 주요 업무로 수행해 왔습니다.
       RESTful 디자인 패턴을 준수하여 API의 주요 기능을 개발하고 유지보수하며, 성능 개선을 위해 다양한 시도와 성과를 이루어냈습니다. 
@@ -97,31 +97,33 @@ function Skills() {
       또한 MSA와 함께 수반될 수 있는 AutoScale, DataBase Replication에 대해서도 높은 이해도를 보유하고 있습니다.<br /><br />
 
       <strong>마지막으로</strong>, Git(flow), Jenkins, AWS CodePipeline 등을 활용한 CI/CD 경험이 있습니다.
-      테스트, 코드 빌드, 배포를 자동화하고 다른 개발자들과 협업을 통해 서비스 코드를 지속해서 통합하고 관리한 경험이 있습니다. 
-      또한 서비스 장애를 탐지하고 이를 발빠르게 대처를 위해 ELK, DataDog등의 모니터링 Tool을 활용해 본 경험도 있습니다.
+      테스트, 빌드, 배포 등의 과정을 자동화하고 다른 개발자들과 협업하여 서비스 코드를 지속적으로 통합하고 관리하였습니다. 
+      또한 서비스 장애를 탐지하고 이를 발빠르게 대처를 위해 ELK, DataDog등의 모니터링 Tool을 활용해 본 적도 있습니다.
     </>
   );
 
   return (
     <section id="skills">
-      <div className="row row-bottom-padded-sm">
+      <div className="row">
         <h1>Skills</h1>
-        <div className="col-sm-6">
+        <div className="col-sm-6 mt-3">
           <h4>ADVANCED</h4>
           <p>
-            {advenced.map((element) => (
+            {advenced.map((element, index) => (
               <img
+                key={index}
                 src={`https://img.shields.io/badge/${element.name}-${element.code}?style=round-square&logo=${element.name}&logoColor=white`}
                 alt={`${element.name} badge`}
               />
             ))}
           </p>
         </div>
-        <div className="col-sm-6">
+        <div className="col-sm-6 mt-3">
           <h4>DEVELOPING</h4>
           <p>
-            {developing.map((element) => (
+            {developing.map((element, index) => (
               <img
+                key={index}
                 src={`https://img.shields.io/badge/${element.name}-${element.code}?style=round-square&logo=${element.name}&logoColor=white`}
                 alt={`${element.name} badge`}
               />
@@ -181,30 +183,30 @@ function History() {
 
   return (
     <section name="history">
-      <div className="row row-bottom-padded-sm">
+      <div className="row">
         <h1>Career & Education</h1>
         <section>
-          <div className="container">
-            <div className="main-timeline">
-              {history.map((element, index) => (
-                <div className={`timeline ${index % 2 === 1 ? "right" : "left"}`} key={index}>
-                  <div className="card">
-                    <div className="card-body">
-                      <h5>{element.title}</h5>
-                      <p> {element.subtitle} | {element.duration}</p>
-                      <p>
-                        {element.details.map((detail, detailIndex) => (
-                          <><strong>&#183;</strong> {detail}<br/></>
-                        ))}
-                      </p>
+          <div className="main-timeline">
+            {history.map((element, index) => (
+              <div className={`timeline ${index % 2 === 1 ? "right" : "left"}`} key={index}>
+                <div className="card">
+                  <div className="card-body">
+                    <h5>{element.title}</h5>
+                    <h6> {element.subtitle} | {element.duration}</h6>
+                    <div>
+                      {element.details.map((detail, detailIndex) => (
+                        <p key={detailIndex}><strong>&#183;</strong> {detail}<br/></p>
+                      ))}
+                    </div>
+                    <div>
                       {element.tags.map((tag, tagIndex) => (
-                        <span class="badge badge-pill" key={tagIndex}> {tag} </span>
+                        <span className="badge badge-pill" key={tagIndex}> {tag} </span>
                       ))}
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </section>
       </div>
@@ -224,9 +226,9 @@ function Projects() {
             <>
               <strong>문제점</strong><br />
               협업용 메신저 “잔디(Jandi)”에서는 채팅방을 들어가고 나갈 수 있음.
-              이때 많은 인원이 채팅방을 나가게 되면 삭제해야 하는 데이터가 상당수 존재하여 속도 저하 문제가 발생<br />
+              이때 많은 인원이 채팅방을 나가게 되면 삭제해야 하는 데이터가 상당수 존재하여 속도 저하 문제가 발생<br /><br />
               <strong>문제 해결</strong><br />
-              AWS SQS와 Consumer Batch를 활용하여 즉시 처리해야 하는 데이터를 제외한 나머지 데이터를 후처리하는 방식으로 변경<br />
+              AWS SQS와 Consumer Batch를 활용하여 즉시 처리해야 하는 데이터를 제외한 나머지 데이터를 후처리하는 방식으로 변경<br /><br />
               <strong>성과</strong><br />
               1,000명 기준 3분 정도 걸리던 프로세스가 20~30초로 단축
             </>
@@ -237,7 +239,7 @@ function Projects() {
           describe: (
             <>
               <strong>문제점</strong><br />
-              NodeJS의 버전업에 있어서 호환되지 않는 module이 존재<br />
+              NodeJS의 버전업에 있어서 호환되지 않는 module이 존재<br /><br />
               <strong>업무 내용</strong><br />
               타깃 버전에 적합한 module의 버전을 확인하고 버전업을 진행하려 했으나 현재 버전과 최신 버전 간의 사용 방식이 크게 변경되어 불가능.
               사용 방식 차이점을 비교, 분석한 내용을 기반으로 코드 수정
@@ -257,7 +259,7 @@ function Projects() {
               <strong>문제점</strong><br />
               기존 사용자 데이터는 Raw text로 기록되어 정형화되지 않았으며, 
               불필요한 데이터를 많이 포함하고 있어 분석하는 데 오랜 시간이 걸릴 뿐만 아니라 
-              백업 및 파일 이동과 같은 관리 업무에도 많은 불편함이 존재<br />
+              백업 및 파일 이동과 같은 관리 업무에도 많은 불편함이 존재<br /><br />
               <strong>개선 및 성과</strong><br />
               클라이언트의 사용 기록을 Raw text로 저장되던 기존의 LogAPI를 정형화된 CSV 형태로 기록되게끔 개선.
               분석에 필요한 데이터만을 저장함으로써, 데이터 용량을 약 80% 이상 축소. 
