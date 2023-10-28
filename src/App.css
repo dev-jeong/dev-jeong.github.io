@@ -430,8 +430,14 @@ section .col-sm-6 p img {
   color: #8fbc8f;
 }
 
+.accordion-body h5 {
+  margin-bottom: 20px;
+}
+
 .accordion-body p {
   margin: 0px;
+  font-size: 14px;
+  line-height: 160%;
 }
 
 .accordion-body .contentLink {
