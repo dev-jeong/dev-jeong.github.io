@@ -63,8 +63,8 @@ function Intro() {
 
 function Skills() {
   const advenced = [
-    { name: "Node.js", code: "339933" },
-    { name: "Express", code: "000000" },
+    { name: "NodeJS", code: "339933" },
+    { name: "ExpressJS", code: "000000" },
     { name: "MySQL", code: "4479A1" },
     { name: "MongoDB", code: "47A248" },
     { name: "Redis", code: "DC382D" },
@@ -75,6 +75,7 @@ function Skills() {
 
   const applicable = [
     { name: "TypeScript", code: "3178C6" },
+    { name: "NestJS", code: "E0234E" },
     { name: "JAVA", code: "f89820" },
     { name: "SpringBoot", code: "6DB33F" },
     { name: "apachekafka", code: "231F20" },
