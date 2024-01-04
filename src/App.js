@@ -73,10 +73,10 @@ function Skills() {
     { name: "Jenkins", code: "D24939" },
   ];
 
-  const developing = [
+  const applicable = [
+    { name: "TypeScript", code: "3178C6" },
     { name: "JAVA", code: "f89820" },
-    { name: "Python", code: "3776AB" },
-    { name: "Spring", code: "6DB33F" },
+    { name: "SpringBoot", code: "6DB33F" },
     { name: "apachekafka", code: "231F20" },
     { name: "amazonSQS", code: "FF4F8B" },
     { name: "gRPC", code: "4285F4" },
@@ -119,9 +119,9 @@ function Skills() {
           </p>
         </div>
         <div className="col-sm-6 mt-3">
-          <h4>DEVELOPING</h4>
+          <h4>APPLICABLE </h4>
           <p>
-            {developing.map((element, index) => (
+            {applicable.map((element, index) => (
               <img
                 key={index}
                 src={`https://img.shields.io/badge/${element.name}-${element.code}?style=round-square&logo=${element.name}&logoColor=white`}
