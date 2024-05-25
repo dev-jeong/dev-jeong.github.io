@@ -140,8 +140,17 @@ function Skills() {
 function History() {
   const history = [
     {
+      title: "LG전자",
+      duration: "2024.5 ~ 현재",
+      subtitle: "ID SW솔루션개발실",
+      details: [
+        "ID광고/컨텐츠솔루션 Project"
+      ],
+      tags: ["NodeJS"],
+    },
+    {
       title: "(주)토스랩",
-      duration: "2023.7 ~ 2023.10",
+      duration: "2023.7 ~ 2023.10 (1년 3개월)",
       subtitle: "Back-end Team",
       details: [
         "\"업무용 메신저 Jandi\" Back-end서버 개발 및 유지보수",
@@ -155,7 +164,7 @@ function History() {
     },
     {
       title: "(주)원트리즈뮤직",
-      duration: "2017.7 ~ 2022.5",
+      duration: "2017.7 ~ 2022.5 (4년 10개월)",
       subtitle: "IT개발운영팀",
       details: [
         "\"매장음악서비스 Rhymeduck\" API서버 개발 및 유지보수",
