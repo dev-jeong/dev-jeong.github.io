@@ -21,11 +21,11 @@ function Sidebar() {
         <a href="https://github.com/dev-jeong"><SiGithub /></a>
         <a href="https://devjeong-note.tistory.com"><SiTistory /></a>
       </div>
-        <div className="profile-contact-mobile">
+      <div className="profile-contact-mobile">
         <h3>정희원 | Jeong Hee Won</h3>
         <p className="hidden"> <AiFillPhone /> 010-4321-8693</p>
         <p> <AiOutlineMail /> need9306@gmail.com</p>
-        <p> <SiGithub/> https://github.com/dev-jeong</p>
+        <p> <SiGithub /> https://github.com/dev-jeong</p>
         <p> <SiTistory /> https://devjeong-note.tistory.com</p>
       </div>
       <nav>
@@ -43,11 +43,11 @@ function Sidebar() {
 function Intro() {
   const intro = (
     <>
-      Back-end 개발자에게 가장 중요한 역량은 무엇일까요?
-      저는 안정적이고 효율적인 서비스를 만들어 내는 능력이라고 생각합니다.
-      모든 플랫폼에 영향을 줄 수 있는 Back-end Part의 신뢰도는 곧 서비스 그 자체의 신뢰도와 직결됩니다.
-      면밀한 코드 검토, 엄격한 테스트, 최신 기술 및 최적화된 알고리즘의 적용을 통해 사용자의 경험을 향상시키고
-      고객에게 신뢰도 높은 서비스를 제공할 수 있도록 노력하겠습니다.
+      비즈니스 성장을 고려한 확장성과 안정성을 갖춘 아키텍처를 지향하는 개발자입니다.
+      서비스의 신뢰도는 시스템의 안정성과 확장성을 함께 고려한 설계에서 나온다고 믿습니다.
+      트렌드에 매몰된 기술 도입보다는 현재 서비스의 규모와 목적, 그리고 향후 트래픽 증가 가능성까지 깊이 있게 검토하여 적용하겠습니다.
+      또한 장애나 성능 저하 상황에서 데이터 기반 분석을 통해 원인을 파악하고 향후 트래픽 증가와 기능 확장을 고려한 구조적 개선으로 이어지도록 하여
+      탄탄한 기술적 근거를 바탕으로 사용자에게 끊임없는 가치를 제공하는 지속 가능한 백엔드 환경을 구축해 나가겠습니다.
     </>
   );
 
@@ -63,44 +63,45 @@ function Intro() {
 
 function Skills() {
   const advenced = [
-    { name: "NodeJS", code: "339933" },
+    { name: "NodeJS", code: "5FA04E" },
     { name: "ExpressJS", code: "000000" },
+    { name: "Serverless", code: "FD5750" },
+    { name: "AWS Lambda", code: "FF9900" },
     { name: "MySQL", code: "4479A1" },
+    { name: "DynamoDB", code: "0d416d" },
     { name: "MongoDB", code: "47A248" },
     { name: "Redis", code: "DC382D" },
     { name: "GitHub", code: "181717" },
-    { name: "Elasticsearch", code: "005571" },
     { name: "Jenkins", code: "D24939" },
   ];
 
   const applicable = [
     { name: "TypeScript", code: "3178C6" },
     { name: "NestJS", code: "E0234E" },
-    { name: "JAVA", code: "f89820" },
+    { name: "JAVA", code: "007396" },
     { name: "SpringBoot", code: "6DB33F" },
     { name: "apachekafka", code: "231F20" },
-    { name: "amazonSQS", code: "FF4F8B" },
-    { name: "gRPC", code: "4285F4" },
+    { name: "amazonSQS", code: "FF9900" },
   ];
 
   const describe = (
     <>
-      저는 Restful API 개발 및 운영, MSA 구축 및 분산 처리, 그리고 다양한 Tool들을 활용한 CI/CD이라는 세 가지 핵심 역량을 보유하고 있습니다.
-      이러한 역량을 바탕으로 빠르고 안정적인 개발과 배포를 수행하고자 하며, 더불어 새로운 기술적 도전도 마다하지 않는 개발자입니다.<br/><br />
+      <strong>Restful API 개발 및 운영, MSA 기반 분산 시스템 구축, CI/CD 환경 운영</strong>을 핵심 역량으로 보유하고 있습니다.<br /><br />
 
-      <strong>첫째</strong>, NodeJS의 Express 프레임워크를 활용하여 Restful API를 개발하고 운영하는 업무를 주요 업무로 수행해 왔습니다.
-      RESTful 디자인 패턴을 준수하여 API의 주요 기능을 개발하고 유지보수하며, 성능 개선을 위해 다양한 시도와 성과를 이루어냈습니다. 
-      또한 Wowza Streaming Engine을 활용해 실시간 미디어 스트림을 제공한 적도 있습니다.<br /><br />
+      <strong>1. Restful API 개발 및 운영</strong><br />
+      Node.js 기반의 Express를 활용한 애플리케이션 단위의 API 서버 구축은 물론, Serverless 프레임워크를 통해 AWS Lambda 기반의 함수 단위 API를 설계하고 구현한 실무 경험을 갖추고 있습니다.
+      단순한 기능 구현에 그치지 않고, 실시간 요청 처리 효율과 운영 안정성을 여러모로 검토하여 서비스 성격에 최적화된 아키텍처를 선택·적용해 왔습니다. 
+      또한 미디어 스트리밍과 같은 특수 목적 서버 환경을 운영해 본 경험도 있습니다.<br /><br />
 
-      <strong>둘째</strong>, 마이크로 서비스 아키텍처(MSA) 운영 및 관리에 장점이 있습니다.
-      서비스의 전반적인 아키텍처를 이해하고, 분산 처리를 통해 서비스의 안정성과 확장성을 향상시키고자 노력하였습니다. 
-      이 과정에서 gRPC 프로토콜을 통한 성능 최적화를 시도한 경험이 있으며, 
-      또한 MSA와 함께 수반될 수 있는 AutoScale, DataBase Replication에 대해서도 높은 이해도를 보유하고 있습니다.<br /><br />
+      <strong>2. MSA 기반 분산 시스템 구축</strong><br />
+      마이크로서비스 환경에서 서비스 간 책임을 명확히 분리하고, REST 및 gRPC 기반 통신 방식을 상황에 맞게 선택하여 적용한 경험이 있습니다. 
+      서비스 간 호출 관계와 데이터 흐름을 사전에 정리하고, DB 레플리케이션 구조를 함께 고려함으로써 분산 환경에서도 각 서비스의 역할과 데이터 경계가 명확하게 유지되도록 시스템을 구성해 왔습니다.<br /><br />
 
-      <strong>마지막으로</strong>, Git(flow), Jenkins, AWS CodePipeline 등을 활용한 CI/CD 경험이 있습니다.
-      테스트, 빌드, 배포 등의 과정을 자동화하고 다른 개발자들과 협업하여 서비스 코드를 지속적으로 통합하고 관리하였습니다. 
-      또한 서비스 장애를 탐지하고 이를 발빠르게 대처를 위해 ELK, DataDog등의 모니터링 Tool을 활용해 본 적도 있습니다.
+      <strong>3. CI/CD 환경 운영</strong><br />
+      GitHub 기반 Git-flow 전략을 적용한 협업 환경에서 Jenkins 등을 활용해 빌드·배포 과정을 자동화하고,
+      운영 중인 서비스에서 변경 사항을 안정적이고 일관되게 반영할 수 있는 CI/CD 환경을 운영해 왔습니다.
     </>
+
   );
 
   return (
@@ -142,11 +143,14 @@ function History() {
     {
       title: "LG전자",
       duration: "2024.5 ~ 현재",
-      subtitle: "ID SW솔루션개발실",
+      subtitle: "B2B클라우드 솔루션 개발팀",
       details: [
-        "ID광고/컨텐츠솔루션 Project"
+        "LG Pro:Centric Cloud 솔루션 Back-end 개발 및 운영",
+        "디지털 사이니지용 클라우드 솔루션의 서버 아키텍처 및 API 개발",
+        "Serverless 기반 API 개발 및 유지보수",
+        "AWS Lambda, DynamoDB를 활용한 데이터 및 디바이스 관리"
       ],
-      tags: ["NodeJS"],
+      tags: ["NodeJS", "TypeScript", "Serverless", "AWS Lambda", "DynamoDB", "S3"],
     },
     {
       title: "(주)토스랩",
@@ -157,10 +161,9 @@ function History() {
         "NodeJS(express.js)기반의 RESTful API 서버 운영 ",
         "Java Spring & gRPC를 활용한 MSA 운영",
         "MongoDB, MySQL, Redis 데이터베이스 활용",
-        "Kafka, SQS를 이용한 메세지 분산 시스템 경험",
-        "Git(flow), Jenkins, AWS CodePipe을 활용한 CI/CD"
+        "Kafka, SQS를 이용한 메세지 분산 시스템 경험"
       ],
-      tags: ["NodeJS", "ExpressJS", "JAVA", "Spring", "gRPC", "MySQL", "MongoDB", "Redis", "GitHub","Jenkins", "AWS Code Pipeline"],
+      tags: ["NodeJS", "ExpressJS", "JAVA", "Spring", "gRPC", "MySQL", "MongoDB", "Redis"],
     },
     {
       title: "(주)원트리즈뮤직",
@@ -171,7 +174,7 @@ function History() {
         "Wowza Streaming Engine 기반의 Media stream 관리",
         "MySQL 데이터베이스 활용",
         "Python Script를 이용한 사용자 데이터 분석 최적화",
-        "Microsoft Azure, AWS를 이용한 솔루션 인프라 구축",
+        "Microsoft Azure, AWS를 이용한 솔루션 인프라 구축"
       ],
       tags: ["NodeJS", "ExpressJS", "Python", "MySQL", "Wowza Streaming Engine", "Microsoft Azure", "AWS"],
     },
@@ -205,7 +208,7 @@ function History() {
                     <h6> {element.subtitle} | {element.duration}</h6>
                     <div>
                       {element.details.map((detail, detailIndex) => (
-                        <p key={detailIndex}><strong>&#183;</strong> {detail}<br/></p>
+                        <p key={detailIndex}><strong>&#183;</strong> {detail}<br /></p>
                       ))}
                     </div>
                     <div>
@@ -228,6 +231,40 @@ function Projects() {
   const accordionData = [
     {
       id: "panel1",
+      heading: "LG전자",
+      contents: [
+        {
+          title: "[ LG Pro:Centric Cloud 솔루션 Back-end 개발 및 유지보수 ]",
+          describe: (
+            <ul>
+              <li>LG Pro:Centric Cloud는 사용자가 디지털 사이니지용 Web App을 직접 제작·배포하고 디바이스를 중앙에서 관리할 수 있는 클라우드 기반 솔루션</li>
+              <li>해당 솔루션의 Back-end를 담당하여 Serverless 프레임워크 기반 TypeScript API를 설계·개발함</li>
+              <li>AWS Lambda를 활용하여 이벤트 기반 로직을 구현하고, 기존 Lambda 함수와 API의 성능 모니터링, 장애 대응, 코드 최적화를 수행함</li>
+              <li>TV 배포 및 디바이스 관리를 위해 AWS DynamoDB 기반 데이터 관리 수행함</li>
+              <li>배포에 필요한 이미지·파일 등 리소스를 AWS S3 스토리지와 연동하여 관리함</li>
+            </ul>
+          ),
+        },
+        {
+          title: "[ 유저 초기 데이터 구조 개선 및 DynamoDB 스토리지 최적화 ]",
+          describe: (
+            <>
+              <strong>문제점</strong><br />
+              유저 생성 시 공통 초기 데이터를 유저별로 복제하여 DynamoDB에 저장하는 구조로 인해,
+              유저 수 증가에 따라 중복 데이터가 반복 저장되며 스토리지 사용량 증가, 공통 데이터 변경 시 대규모 수정이 필요한 유지보수·운영 리스크,
+              그리고 DynamoDB 파티션 효율 및 확장성 저하 문제가 발생함.<br /><br />
+              <strong>문제 해결</strong><br />
+              유저 생성 시 초기 데이터를 복제하는 로직을 제거하고, 공통 초기 데이터를 단일 DynamoDB 테이블로 중앙화하여 관리하는 구조로 개선함.
+              유저 데이터 조회(GET) 시 공통 데이터와 유저 개인 데이터를 서버 단에서 조합하여 응답하도록 API 로직을 수정했으며,
+              기존에 저장되어 있던 중복 데이터를 제거하기 위한 데이터 마이그레이션 및 후속 정리 작업을 수행함.
+              해당 개선을 통해 스토리지 사용량을 약 80% 감소시켰으며, 데이터 구조 단순화로 인해 조회 로직의 일관성과 시스템 확장성을 크게 향상시킴.<br /><br />
+            </>
+          ),
+        },
+      ],
+    },
+    {
+      id: "panel2",
       heading: "(주)토스랩",
       contents: [
         {
@@ -235,11 +272,11 @@ function Projects() {
           describe: (
             <>
               <strong>문제점</strong><br />
-              온라인/오프라인을 나타내는 "그린닷"기능에서 간헐적으로 일관성이 깨지는 문제가 발생<br /><br />
+              온라인/오프라인을 나타내는 "Green-dot"기능에서 간헐적으로 일관성이 깨지는 문제가 발생<br /><br />
               <strong>문제 해결</strong><br />
               소켓 통신의 연결 상태를 기준으로 Redis Cache의 데이터를 갱신하는 방법으로 기능이 구현되어 있었음.
               우선은 Redis Cache에 불필요하게 중복된 데이터가 다수 존재하였고, 해당 부분을 정리.
-              "그린닷"기능에 시간 차가 존재하더라도 정확성이 우선시 되어 일정 시간마다 API를 호출하는 방식으로 변경하고 TTL을 짧게 설정하여 해결.<br /><br />
+              "Green-dot"기능에 시간 차가 존재하더라도 정확성이 우선시 되어 일정 시간마다 API를 호출하는 방식으로 변경하고 TTL을 짧게 설정하여 해결.<br /><br />
             </>
           ),
         },
@@ -273,18 +310,18 @@ function Projects() {
       ],
     },
     {
-      id: "panel2",
+      id: "panel3",
       heading: "(주)원트리즈뮤직",
       contents: [
         {
           title: "[ Media Streaming API ]",
           describe: (
-            <>
+            <ul>
               <li>Window Client인 "매장 음악 플레이어"의 API 서버 개발 및 유지 보수</li>
               <li>Wowza Streaming Engine 기반의 실시간 미디어 스트림을 제공</li>
               <li>Transcoder 지원에도 안정적인 서비스를 받지 못하는 고객을 위해 다운로드 & 플레이 방식의 API를 구축</li>
               <li>CDN Stroge와 DB를 활용하여 미디어 파일 및 스트림 관리 등을 수행</li>
-            </>
+            </ul>
           ),
         },
         {
@@ -295,10 +332,10 @@ function Projects() {
               기존에 저장되던 사용자 데이터는 Raw text로 기록되어 정형화되지 않았으며, 불필요한 데이터를 많이 포함하고 있어 <br />
               분석하는 데 오랜 시간이 걸릴 뿐만 아니라 백업 및 파일 이동과 같은 관리 업무에도 많은 불편함이 존재<br /><br />
               <strong>개선 및 성과</strong><br />
-              Raw text로 저장하던 기존의 LogAPI를 정형화된 CSV 형태로 저장하게끔 개선. 
+              Raw text로 저장하던 기존의 LogAPI를 정형화된 CSV 형태로 저장하게끔 개선.
               분석에 필요한 데이터만 저장함으로써 데이터 용량을 약 80% 이상 축소.
               또한 변경된 포맷에 맞추어 스크립트를 수정하였고, 데이터를 분석하는데 소요되는 시간을 대폭 낮추었음.
-              분석된 데이터는 담당 부서로 전달되어 서비스 품질향상에 크게 이바지했을 뿐만 아니라, 
+              분석된 데이터는 담당 부서로 전달되어 서비스 품질향상에 크게 이바지했을 뿐만 아니라,
               한국 저작권 협회, 음반 산업 협회 등에 전달되어 활용됨.
             </>
           ),
@@ -312,7 +349,7 @@ function Projects() {
               확립되지 않아 업무의 효율성이 떨어졌음. 또한, 계약서를 비롯한 회사에서 관리 되는
               여러 서류가 다양한 형태(지류, 파일 등)로 파편화되어 관리되는 문제가 존재<br /><br />
               <strong>개선 및 성과</strong><br />
-              웹페이지를 제작하여, 개인 고객들이 "웹페이지 접속" - "필요 정보입력" - "계정 및 계약서 생성" - 
+              웹페이지를 제작하여, 개인 고객들이 "웹페이지 접속" - "필요 정보입력" - "계정 및 계약서 생성" -
               "자동 결제 등록"의 절차를 통해 서비스를 사용할 수 있게끔 B2C 계약 프로세스 확립.
               또한, Cloud Storage 리소스를 활용하여 해당 프로세스를 통해 만들어진 계약서가 자동으로
               저장되고, 담당자들이 조회할 수 있도록 인프라를 구축. 파편화되던 모든 파일을 일괄적으로 정리할 수 있는 기반을 마련.
@@ -330,7 +367,7 @@ function Projects() {
               하지만, 이는 서버에 부하를 줄 수 있는 방식으로 개선이 필요하였고, 메세지 기반의 MQTT프로토콜을 사용하여
               발행(publish)과 구독(subscribe)의 형태로 변경하여 서버 트래픽을 개선.<br /><br />
               <strong>개선 2 - 자동 펌웨어 업데이트</strong><br />
-              기존에는 셋톱박스의 펌웨어 업데이트를 위해서는 "셋톱박스 회수" - 
+              기존에는 셋톱박스의 펌웨어 업데이트를 위해서는 "셋톱박스 회수" -
               "사내에서 펌웨어를 업데이트" - "재분출"의 절차를 겪어야 하는 불편함이 있었음
               이에 펌웨어를 수정하여 플레이어 실행 전 버전 확인 및 업데이트 체크 로직을 추가하고
               이에 필요한 DB 테이블과 CDN Storage 추가하고 API 개발 등의 업무를 수행<br /><br />
@@ -340,17 +377,17 @@ function Projects() {
       ],
     },
     {
-      id: "panel3",
+      id: "panel4",
       heading: "개인 프로젝트",
       contents: [
         {
           title: "Naver Search AD",
           describe: (
-            <>
+            <ul>
               <li>네이버 광고는 클릭당 단가가 높은 광고가 페이지 상위에 노출되게끔 구성되어 있음</li>
               <li>광고주는 최대한 낮은 금액으로 페이지 상단에 노출 시키기 위해 클릭당 단가를 소폭 높이고 낮추는 작업을 반복함</li>
               <li>이러한 작업을 네이버 OPEN API와 연동하여 반복적으로 수행하는 Python 스크립트를 제작</li>
-            </>
+            </ul>
           ),
           gitLink: "https://github.com/dev-jeong/NaverSearchAD",
           blogLink: "https://devjeong-note.tistory.com/21",
@@ -358,12 +395,12 @@ function Projects() {
         {
           title: "Update Macro",
           describe: (
-            <>
+            <ul>
               <li>개인 쇼핑몰의 상품정보를 업로드 & 업데이트해 주는 사이트가 존재</li>
               <li>하지만 자동으로 동작하지 않고 해당 사이트에서 일렬의 작업들을 직접 진행해야 함</li>
               <li>해당 작업을 주기적으로 하지 않으면 상품정보의 일관성이 깨져 쇼핑몰 운영에 차질이 발생</li>
               <li>Handless Browser인 Puppeteer를 활용해 이러한 일렬의 작업을 자동으로 반복해 줄 수 있는 스크립트를 제작</li>
-            </>
+            </ul>
           ),
           gitLink: "https://github.com/dev-jeong/UpdateMacro",
           blogLink: "https://devjeong-note.tistory.com/42",
